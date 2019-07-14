@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "id": 124862084
+    },
+    {
+      "id": 580634416
+    },
+    {
+      "id": 558428218
+    }
+  ],
+  "superusers": [
+    {
+      "id": 124862084
+    },
+    {
+      "id": 558428218
+    }
+  ],
+  "houses": [
+    {
+      "ogs": [
+        {
+          "score": 0
+        }
+      ],
+      "score": 0
+    },
+    {
+      "id": "1",
+      "name": "district",
+      "score": 100,
+      "ogs": []
+    }
+  ],
+  "ogs": [
+    {
+      "id": "og1"
+    }
+  ],
+  "districts": [
+    {
+      "id": "1",
+      "name": "district1",
+      "score": 0
+    },
+    {
+      "id": "2",
+      "name": "district2",
+      "score": 0
+    },
+    {
+      "id": "3",
+      "name": "district3",
+      "score": 0
+    },
+    {
+      "id": "4",
+      "name": "district4",
+      "score": 0
+    },
+    {
+      "id": "5",
+      "name": "district5",
+      "score": 0
+    },
+    {
+      "id": "6",
+      "name": "district6",
+      "score": 0
+    }
+  ]
+}
