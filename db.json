@@ -10,7 +10,7 @@
       "id": 558428218
     },
     {
-	"id": 189089655    
+	"id": 189089655
     }
   ],
   "superusers": [
@@ -21,7 +21,7 @@
       "id": 558428218
     },
     {
-	"id": 189089655  
+	"id": 189089655
     }
   ],
   "houses": [
@@ -72,8 +72,28 @@
       "score": 0
     },
     {
-      "id": "6",
-      "name": "district6",
+      "id": "7",
+      "name": "district7",
+      "score": 0
+    },
+    {
+      "id": "8",
+      "name": "district8",
+      "score": 0
+    },
+    {
+      "id": "10",
+      "name": "district10",
+      "score": 0
+    },
+    {
+      "id": "11",
+      "name": "district11",
+      "score": 0
+    },
+    {
+      "id": "12",
+      "name": "district12",
       "score": 0
     }
   ]
