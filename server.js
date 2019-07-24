@@ -353,7 +353,7 @@ process.on("unhandledRejection", (reason, promise) => {
 
 bot.startPolling();
 
-bot.command('local', (ctx) => ctx.replyWithPhoto({ source: '/cats/cat1.jpeg' }))
+bot.command("local", (ctx) => ctx.replyWithPhoto({ source: '/SSH/Screenshot 2019-07-14 at 11.24.06 AM.png' }))
 bot.command('stream', (ctx) => ctx.replyWithPhoto({ source: fs.createReadStream('/cats/cat2.jpeg') }))
 bot.command('buffer', (ctx) => ctx.replyWithPhoto({ source: fs.readFileSync('/cats/cat3.jpeg') }))
 bot.command('pipe', (ctx) => ctx.replyWithPhoto({ url: 'https://picsum.photos/200/300/?random' }))
