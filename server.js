@@ -4,11 +4,11 @@ const express = require("express");
 const Telegraf = require("telegraf");
 const Model = require("./model");
 const winston = require("winston");
-const Extra = require('telegraf/extra')
-const fs = require('fs')
+const Extra = require('telegraf/extra');
+const fs = require('fs');
 
-const AnimationUrl1 = 'https://media.giphy.com/media/ya4eevXU490Iw/giphy.gif'
-const AnimationUrl2 = 'https://media.giphy.com/media/LrmU6jXIjwziE/giphy.gif'
+const AnimationUrl1 = 'https://media.giphy.com/media/ya4eevXU490Iw/giphy.gif';
+const AnimationUrl2 = 'https://media.giphy.com/media/LrmU6jXIjwziE/giphy.gif';
 
 const logger = winston.createLogger({
   level: "info",
@@ -353,20 +353,20 @@ process.on("unhandledRejection", (reason, promise) => {
 
 bot.startPolling();
 
-bot.command("local", (ctx) => ctx.replyWithPhoto({ source: '/SSH/Screenshot 2019-07-14 at 11.24.06 AM.png' }))
-bot.command('stream', (ctx) => ctx.replyWithPhoto({ source: fs.createReadStream('/cats/cat2.jpeg') }))
-bot.command('buffer', (ctx) => ctx.replyWithPhoto({ source: fs.readFileSync('/cats/cat3.jpeg') }))
-bot.command('pipe', (ctx) => ctx.replyWithPhoto({ url: 'https://picsum.photos/200/300/?random' }))
-bot.command('url', (ctx) => ctx.replyWithPhoto('https://picsum.photos/200/300/?random'))
-bot.command('animation', (ctx) => ctx.replyWithAnimation(AnimationUrl1))
-bot.command('pipe_animation', (ctx) => ctx.replyWithAnimation({ url: AnimationUrl1 }))
+bot.command("local", (ctx) => ctx.replyWithPhoto({ source: './SSH/Screenshot 2019-07-14 at 11.24.06 AM.png' }));
+bot.command('stream', (ctx) => ctx.replyWithPhoto({ source: fs.createReadStream('/cats/cat2.jpeg') }));
+bot.command('buffer', (ctx) => ctx.replyWithPhoto({ source: fs.readFileSync('/cats/cat3.jpeg') }));
+bot.command('pipe', (ctx) => ctx.replyWithPhoto({ url: 'https://picsum.photos/200/300/?random' }));
+bot.command('url', (ctx) => ctx.replyWithPhoto('https://picsum.photos/200/300/?random'));
+bot.command('animation', (ctx) => ctx.replyWithAnimation(AnimationUrl1));
+bot.command('pipe_animation', (ctx) => ctx.replyWithAnimation({ url: AnimationUrl1 }));
 
 bot.command('caption', (ctx) => ctx.replyWithPhoto('https://picsum.photos/200/300/?random', {
   caption: 'Caption *text*',
   parse_mode: 'Markdown'
-}))
+}));
 
-bot.command('album', (ctx) => {
+bot.command("album", (ctx) => {
   ctx.replyWithMediaGroup([
     {
       'media': 'AgADBAADXME4GxQXZAc6zcjjVhXkE9FAuxkABAIQ3xv265UJKGYEAAEC',
@@ -399,15 +399,17 @@ bot.command('album', (ctx) => {
       'type': 'photo'
     }
   ])
-})
+};)
 
 bot.command('edit_media', (ctx) => ctx.replyWithAnimation(AnimationUrl1, Extra.markup((m) =>
   m.inlineKeyboard([
     m.callbackButton('Change media', 'swap_media')
   ])
-)))
+)));
 
 bot.action('swap_media', (ctx) => ctx.editMessageMedia({
   type: 'animation',
   media: AnimationUrl2
-}))
+}));
+
+bot.launch();
